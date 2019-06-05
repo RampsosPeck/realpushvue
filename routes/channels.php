@@ -10,7 +10,20 @@
 | used to check if an authenticated user can listen to the channel.
 |
 */
-
+/*
 Broadcast::channel('App.User.{id}', function ($user, $id) {
     return (int) $user->id === (int) $id;
 });
+ 
+
+ Canal para los usuarios authenticados
+Broadcast::channel('chat', function ($user) {
+    return Auth::user();
+});*/
+
+ 
+
+Broadcast::channel('chat', function ($user) {
+    return Auth::user();
+});
+

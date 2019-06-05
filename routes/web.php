@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/write', 'MessageController@index')->name('write');
+Route::get('/messages', 'MessageController@fetch')->middleware('auth');
+Route::post('/messages', 'MessageController@sentMessage')->middleware('auth');

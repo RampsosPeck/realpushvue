@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/La_Paz',
 
     /*
     |--------------------------------------------------------------------------
@@ -169,11 +169,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Realpushvue\Providers\AppServiceProvider::class,
+        Realpushvue\Providers\AuthServiceProvider::class,
+        Realpushvue\Providers\BroadcastServiceProvider::class,
+        Realpushvue\Providers\EventServiceProvider::class,
+        Realpushvue\Providers\RouteServiceProvider::class,
 
     ],
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Realpushvue;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -36,4 +36,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /*Un usuario puede tener muchos mensajes*/
+    public function message()
+    {
+        return $this->hasMany(Message::class);
+    }
 }
